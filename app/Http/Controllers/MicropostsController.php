@@ -39,7 +39,7 @@ public function store(Request $request)
 
 public function destroy($id)
 {
-    $micropost = \App\Mictopost::findOrFail($id);
+    $micropost = \App\Micropost::findOrFail($id);
     
     if(\Auth::id() === $micropost->user_id) {
         $micropost->delete();
